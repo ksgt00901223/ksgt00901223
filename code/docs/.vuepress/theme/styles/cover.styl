@@ -1,0 +1,65 @@
+// 水印图
+$defaultCover = 'https://s2.ax1x.com/2019/04/13/AqfKs0.png';
+$vueCover = 'https://s2.ax1x.com/2019/04/13/AqfKs0.png';
+// 颜色
+$color0 = #FCC143;
+$color1 = #409EFF;
+$color2 = #67C23A;
+$color3 = #FC4349;
+$color4 = #CBD6DA;
+$color5 = #FFE445;
+$color6 = #C458EC;
+$color7 = #332B40;
+// 透明
+$a = 0.25;
+$acolor0 = rgba(252, 193, 67, $a);
+$acolor1 = rgba(64, 158, 255, $a);
+$acolor2 = rgba(103, 194, 58, $a);
+$acolor3 = rgba(252, 67, 73, $a);
+$acolor4 = rgba(203, 214, 218, $a);
+$acolor5 = rgba(255, 228, 69, $a);
+$acolor6 = rgba(196, 88, 236, $a);
+$acolor7 = rgba(51, 43, 64, $a);
+
+@font-face {font-family: 'webfont';
+  src: url('//at.alicdn.com/t/webfont_7h4scpummli.eot'); /* IE9*/
+  src: url('//at.alicdn.com/t/webfont_7h4scpummli.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('//at.alicdn.com/t/webfont_7h4scpummli.woff') format('woff'), /* chrome、firefox */
+  url('//at.alicdn.com/t/webfont_7h4scpummli.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+  url('//at.alicdn.com/t/webfont_7h4scpummli.svg#杨任东竹石体-Bold') format('svg'); /* iOS 4.1- */
+}
+.web-font{
+    font-family:"webfont" !important;
+    font-size:16px;font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.defaultCover {
+    background-image: url($defaultCover) !important;
+}
+
+.vueCover {
+    background-image: url($vueCover) !important;
+}
+
+// 循环生成颜色类名
+for i in 0 1 2 3 4 5 6 7 {
+    .bg-color-{i} {
+        background: $color + i !important;
+    }
+
+    .font-color-{i} {
+        color: $color + i !important;
+    }
+
+    .bga-color-{i} {
+        background: $acolor + i !important;
+    }
+
+    .fonta-color-{i} {
+        color: $color + i !important;
+        background: $acolor + i !important;
+    }
+}
