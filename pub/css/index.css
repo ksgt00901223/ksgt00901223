@@ -57,9 +57,9 @@ body {
   }
 }
 #box {
-  width: 50%;
+  width: 40%;
   max-width: 600px;
-  min-width: 400px;
+  min-width: 300px;
   margin: 15vh auto;
   text-align: center;
 }
@@ -87,7 +87,6 @@ body {
 }
 ul {
   padding: 0;
-  list-style: none;
 }
 p {
   font-size: 18px;
@@ -104,6 +103,9 @@ li {
 }
 li span {
   text-shadow: -2px -2px #333;
+  display: inline-block;
+  width: 150px;
+  text-align: left;
 }
 li a {
   color: #fff;
